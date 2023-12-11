@@ -17,7 +17,7 @@ int main() {
         }
     }
 
-    cout << stk.size()/2 - 1;
+    cout << stk.empty() ? 0 : stk.size()/2 - 1;
 
     return 0;
 }
