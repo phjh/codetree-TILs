@@ -15,7 +15,7 @@ int main() {
             map[temp1] = temp2;
         }
     }
-    int sum = 0;
+    long sum = 0;
     for (auto a : map) {
         sum += a.second;
     }
