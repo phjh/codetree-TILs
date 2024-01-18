@@ -6,17 +6,15 @@ int main() {
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        int temp;
-        long long mult=1;
+        int temp,mult=1;
         cin >> temp;
-        queue.push(temp);
+        if (queue.empty() || temp < queue.top()) {
+            queue.push(temp);
+        }
         priority_queue<int> tempqueue = queue;
         if (queue.size() < 3){
             cout << -1 << endl;
             continue;
-        }
-        while (tempqueue.size() != 3) {
-            tempqueue.pop();
         }
         for (int i = 0; i < 3; i++) {
             mult *= tempqueue.top();
