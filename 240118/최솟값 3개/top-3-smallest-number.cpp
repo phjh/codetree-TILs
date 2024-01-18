@@ -2,17 +2,15 @@
 #include <queue>
 using namespace std;
 int main() {
-    priority_queue<int> queue;
+    priority_queue<int, vector<int>, greater<int>> queue;
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        int temp,mult=1;
+        int temp, mult = 1;
         cin >> temp;
-        if (queue.empty() || temp < queue.top()) {
-            queue.push(temp);
-        }
-        priority_queue<int> tempqueue = queue;
-        if (queue.size() < 3){
+        queue.push(temp);
+        priority_queue<int, vector<int>, greater<int>> tempqueue = queue;
+        if (queue.size() < 3) {
             cout << -1 << endl;
             continue;
         }
