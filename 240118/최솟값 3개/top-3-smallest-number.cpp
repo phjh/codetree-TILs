@@ -6,7 +6,8 @@ int main() {
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
-        int temp, mult = 1;
+        int temp;
+        long long mult = 1;
         cin >> temp;
         queue.push(temp);
         priority_queue<int, vector<int>, greater<int>> tempqueue = queue;
